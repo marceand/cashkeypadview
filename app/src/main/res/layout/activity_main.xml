@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0BB634"
+    tools:context="com.marceme.cashkeypadview.MainActivity">
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$35"
+        android:textColor="#FFF"
+        android:textSize="86sp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"/>
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="request"
+            android:textSize="24sp"
+            android:textColor="#0BB634"
+            android:layout_weight="0.5"
+            android:background="#fff"
+            android:layout_marginRight="1dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="pay"
+            android:textSize="24sp"
+            android:textColor="#0BB634"
+            android:layout_weight="0.5"
+            android:background="#fff"
+            android:layout_marginLeft="1dp"/>
+    </LinearLayout>
+
+    <com.marceme.cashkeypadview.KeyPadView
+        android:id="@+id/view_keypad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttons_container"
+        android:layout_below="@+id/display"/>
+</RelativeLayout>
